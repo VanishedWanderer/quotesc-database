@@ -6,5 +6,7 @@ services:
     environment:
       - POSTGRES_USER=${DB_SUPERUSER}
       - POSTGRES_PASSWORD=${DB_SUPERUSER_PASSWORD}
+      - QUOTESC_USER=${DB_QUOTESC_USER}
+      - QUOTESC_PASSWORD=${DB_QUOTESC_PASSWORD}
     ports:
       - ${DB_PORT}:5432
