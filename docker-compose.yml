@@ -2,7 +2,10 @@ version: "3"
 
 services:
   db:
-    image: quotescdb 
+    #image: quotescdb 
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=${DB_SUPERUSER}
       - POSTGRES_PASSWORD=${DB_SUPERUSER_PASSWORD}
